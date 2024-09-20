@@ -1,12 +1,9 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main>Hello world</main>
-      <Footer />
-    </>
+    <main>
+      <Button>View forms</Button>
+    </main>
   );
 }
