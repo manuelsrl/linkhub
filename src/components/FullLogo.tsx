@@ -5,11 +5,13 @@ import { Archivo } from "next/font/google";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
-export default function FullLogo() {
+export const FullLogo = () => {
   return (
     <div className={cn("flex items-end", archivo.className)}>
-      <span className="text-2xl">LinkHub</span>
-      <Image alt="" src={logo} className="h-8 w-8" />
+      <span className="text-neutral-950 dark:text-neutral-50 text-3xl">
+        LinkHub
+      </span>
+      <Image alt="" src={logo} className="h-8 w-8 mb-1" />
     </div>
   );
-}
+};
