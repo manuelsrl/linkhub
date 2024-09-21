@@ -39,7 +39,7 @@ const LoginPage = () => {
                 <LoginForm />
               </CardContent>
               <CardFooter>
-                <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
+                <div className="flex flex-col gap-4 sm:flex-row w-full items-center justify-center sm:gap-6">
                   <Button variant="outline">
                     <FcGoogle size={20} />
                     Sign in with Google
