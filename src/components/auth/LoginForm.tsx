@@ -25,12 +25,13 @@ export const LoginForm = () => {
     },
   });
 
+  const onSubmit = (values: z.infer<typeof LoginSchema>) => {
+    console.log(values);
+  };
+
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit((values) => console.log(values))}
-        className="space-y-6"
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-4">
           <FormField
             control={form.control}
