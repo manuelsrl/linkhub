@@ -7,9 +7,9 @@ interface FormErrorProps {
 export const FormError = ({ message }: FormErrorProps) => {
   if (!message) return null;
   return (
-    <div className="rounded flex items-center border-s-4 border-red-500 bg-red-50 p-4 dark:border-red-600 dark:bg-red-900">
+    <div className="rounded flex items-center border-s-4 border-red-500 bg-red-50 p-4 dark:border-red-600 dark:bg-red-900 text-red-700 dark:text-red-200">
       <IoWarningSharp className="inline size-5 mr-2" />
-      <p className="text-sm text-red-700 dark:text-red-200">{message}</p>
+      <p className="text-sm">{message}</p>
     </div>
   );
 };

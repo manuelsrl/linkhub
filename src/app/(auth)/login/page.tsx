@@ -38,17 +38,20 @@ const LoginPage = () => {
               <CardContent>
                 <LoginForm />
               </CardContent>
-              <CardFooter>
-                <div className="flex flex-col gap-4 sm:flex-row w-full items-center justify-center sm:gap-6">
-                  <Button variant="outline">
-                    <FcGoogle size={20} className="mr-2" />
-                    Sign in with Google
-                  </Button>
-                  <Button variant="outline">
-                    <IoLogoGithub size={20} className="mr-2" />
-                    Sign in with Github
-                  </Button>
-                </div>
+              <CardFooter className="pb-3 flex flex-col gap-4 sm:flex-row w-full items-center justify-center sm:gap-6">
+                <Button variant="outline">
+                  <FcGoogle size={20} className="mr-2" />
+                  Sign in with Google
+                </Button>
+                <Button variant="outline">
+                  <IoLogoGithub size={20} className="mr-2" />
+                  Sign in with Github
+                </Button>
+              </CardFooter>
+              <CardFooter className="flex justify-center">
+                <Link href="/signup">
+                  <Button variant="link">Don`t have an account?</Button>
+                </Link>
               </CardFooter>
             </Card>
           </div>
