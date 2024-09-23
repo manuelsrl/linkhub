@@ -17,8 +17,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { FormError } from "@/components/auth/FormError";
 import { FormSuccess } from "@/components/auth/FormSuccess";
+import { useTransition } from "react";
 
 export const LoginForm = () => {
+  const [isPending, startTransition] = useTransition();
+
   const form = useForm<z.infer<typeof LoginSchema>>({
     resolver: zodResolver(LoginSchema),
     defaultValues: {
@@ -28,7 +31,9 @@ export const LoginForm = () => {
   });
 
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
-    console.log(values);
+    startTransition(() => {
+      console.log(values);
+    });
   };
 
   return (
@@ -45,7 +50,8 @@ export const LoginForm = () => {
                   <Input
                     type="email"
                     {...field}
-                    placeholder="john.doe@me.com"
+                    disabled={isPending}
+                    placeholder="john.doe@example.com"
                   />
                 </FormControl>
                 <FormMessage />
@@ -59,7 +65,12 @@ export const LoginForm = () => {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input type="password" {...field} placeholder="******" />
+                  <Input
+                    type="password"
+                    {...field}
+                    disabled={isPending}
+                    placeholder="******"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

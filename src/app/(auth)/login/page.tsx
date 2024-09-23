@@ -26,7 +26,7 @@ const LoginPage = () => {
               <FullLogo />
             </Link>
 
-            <Card className="bg-transparent dark:bg-transparent mt-10">
+            <Card className="bg-transparent dark:bg-transparent mt-5 sm:mt-10">
               <CardHeader>
                 <CardTitle className="text-3xl text-center">
                   Welcome back
@@ -41,11 +41,11 @@ const LoginPage = () => {
               <CardFooter>
                 <div className="flex flex-col gap-4 sm:flex-row w-full items-center justify-center sm:gap-6">
                   <Button variant="outline">
-                    <FcGoogle size={20} />
+                    <FcGoogle size={20} className="mr-2" />
                     Sign in with Google
                   </Button>
                   <Button variant="outline">
-                    <IoLogoGithub size={20} />
+                    <IoLogoGithub size={20} className="mr-2" />
                     Sign in with Github
                   </Button>
                 </div>
